@@ -8,6 +8,15 @@
   outline: 1px dashed red;
 } */
 
+:root {
+  --grey-dark: #5e5e5e;
+  --grey-light: #e7e6e6;
+  --light-black: #393f41;
+  --button-blue: #137ec0;
+  --border-grey: #d1d7da;
+  --background: #f6fcff;
+}
+
 html {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -15,7 +24,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #f6fcff;
+  background-color: var(--background);
 }
 
 /*
@@ -43,7 +52,7 @@ p {
   font-size: 1.2rem;
   font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
   line-height: 2rem;
-  color: #5e5e5e;
+  color: var(--grey-dark);
 }
 
 ul {
@@ -57,7 +66,7 @@ nav {
   
   font-size: 1rem;
   padding: 2.5rem 4rem;
-  border-bottom: 0.1rem solid #d1d7da;
+  border-bottom: 0.1rem solid var(--border-grey);
 }
 
 nav ul {
@@ -81,6 +90,7 @@ nav .right-items {
 }
 
 .author-info {
+  color: var(--grey-dark);
   cursor: pointer;
 }
 
@@ -99,11 +109,11 @@ nav .right-items {
 */
 .button {
   color: white;
-  background: #137ec0;
+  background: var(--button-blue);
 
   border-radius: 5rem;
   border-style: none;
-  border: 0.1rem solid #137ec0;
+  border: 0.1rem solid var(--button-blue);
   width: 4.8rem;
   height: 2.4rem;
   cursor: pointer;
@@ -112,17 +122,17 @@ nav .right-items {
 .button.subscribe {
   width: 2.4rem;
   border-radius:50%;
-  color: #e7e6e6;
+  color: var(--grey-light);
 }
 
 .button.get-started {
   width: 5.6rem;
 
-  color: #137ec0;
+  color: var(--button-blue);
   background: transparent;
 
   border-style: solid;
-  border-color: #137ec0;
+  border-color: var(--button-blue);
 }
 
 /*
@@ -135,7 +145,8 @@ nav .right-items li {
 .right-items a {
   text-decoration: none;
   font-size: 0.8rem;
-  color: #137ec0;
+  color: var(--button-blue);
+  
 }
 
 /*
@@ -143,20 +154,30 @@ nav .right-items li {
 */
 .fa.fa-github {
   font-size: 2.4rem;
-  color: #393f41;
+  color: var(--light-black);
+}
+
+.box {
+  z-index: 1;
+  position: absolute;
+  background: var(--background);
+  height: 13rem;
 }
 
 /*
   aside
 */
-aside {
+aside, .box {
   display: flex;
   flex-direction: column;
   width: 12rem;
   margin: 4rem 1rem 0 4rem;
-  position: fixed;
   inset: 5.5rem 0 auto 0;
+}
+
+aside {
   z-index: -1;
+  position: fixed;
 }
 
 aside h4,
@@ -185,7 +206,7 @@ aside p {
 }
 
 .aside-info {
-  border-bottom: 0.1rem solid #d1d7da;
+  border-bottom: 0.1rem solid var(--border-grey);
 }
 
 .notifications {
@@ -198,7 +219,7 @@ aside p {
 }
 
 .notifications span {
-  color: #5e5e5e;
+  color: var(--grey-dark);
 }
 
 /*
@@ -240,7 +261,7 @@ article .article-nav-right {
 }
 
 .article-nav-left {
-  color: #5e5e5e;
+  color: var(--grey-dark);
 }
 
 .article-nav-right li {
@@ -276,7 +297,7 @@ article .article-nav-right {
   font-size: 0.9rem;
   align-self: center;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  color: #5e5e5e;
+  color: var(--grey-dark);
 }
 
 article p {
