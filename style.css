@@ -1,13 +1,22 @@
+/*=========
+  Testing
+===========*/
+/* * {
+  outline: 1px dashed red;
+} */
+
+/*=====================================
+  Box-sizing | Initial margin padding
+=======================================*/
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* * {
-  outline: 1px dashed red;
-} */
-
+/*================
+  root variables
+==================*/
 :root {
   --grey-dark: #5e5e5e;
   --grey-light: #e7e6e6;
@@ -17,6 +26,9 @@
   --background: #f6fcff;
 }
 
+/*================
+  Document setup
+==================*/
 html {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -27,27 +39,38 @@ body {
   background-color: var(--background);
 }
 
-/*
+/*===============
   article title
-*/
+=================*/
 h1 {
+  color: var(--light-black);
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
+  font-family: 'Heebo', sans-serif;
 }
 
-/*
+/*==============
   author name
-*/
+================*/
 h2 {
   font-weight: 600;
   font-size: 1.8rem;
+}
+
+h2, h4, .click {
   cursor: pointer;
 }
 
+/*====
+=======*/
 h3 {
   font-weight: 400;
+  color: var(--button-blue);
 }
 
+/*===================
+  Element selectors
+=====================*/
 p {
   font-size: 1.2rem;
   font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
@@ -59,6 +82,9 @@ ul {
   list-style: none;
 }
 
+/*================
+  Navigation bar
+==================*/
 nav {
   display: flex;
   align-items: center;
@@ -104,9 +130,9 @@ nav .right-items {
   justify-content: center;
 }
 
-/*
+/*=============
   nav buttons
-*/
+===============*/
 .button {
   color: white;
   background: var(--button-blue);
@@ -135,9 +161,9 @@ nav .right-items {
   border-color: var(--button-blue);
 }
 
-/*
+/*===================
   nav : right-items
-*/
+=====================*/
 nav .right-items li {
   margin-right: 1.5rem;
 }
@@ -149,14 +175,17 @@ nav .right-items li {
   
 }
 
-/*
-  site logo
-*/
+/*================
+  Nav: site logo
+==================*/
 .fa.fa-github {
   font-size: 2.4rem;
   color: var(--light-black);
 }
 
+/*==============
+  aside hidden
+================*/
 .box {
   z-index: 1;
   position: absolute;
@@ -164,9 +193,9 @@ nav .right-items li {
   height: 13rem;
 }
 
-/*
+/*=======
   aside
-*/
+=========*/
 aside, .box {
   display: flex;
   flex-direction: column;
@@ -218,18 +247,23 @@ aside p {
   margin-right: 0.3rem;
 }
 
+.notifications {
+  font-size: 1.2rem;
+}
+
 .notifications span {
   color: var(--grey-dark);
 }
 
-/*
+/*================
   main | article
-*/
+==================*/
 main {
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 4rem 2rem 2rem;
 }
 
@@ -243,11 +277,12 @@ article {
 .article-nav {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0;
+  margin: 1rem 0 2.2rem;
 }
 
 article .article-nav-left,
-article .article-nav-right {
+article .article-nav-right,
+.bottom-socials {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -264,7 +299,8 @@ article .article-nav-right {
   color: var(--grey-dark);
 }
 
-.article-nav-right li {
+.article-nav-right li,
+.bottom-socials li {
   cursor: pointer;
   color: white;
   background: black;
@@ -276,7 +312,8 @@ article .article-nav-right {
   align-items: center;
 }
 
-.article-nav-right .white-background {
+.article-nav-right .white-background,
+.bottom-socials .white-background {
   color: black;
   background: transparent;
 }
@@ -305,10 +342,25 @@ article p {
   color: black;
 }
 
-/*
-  footer
-*/
+/*=============================
+  article bottom interactions
+===============================*/
+.bottom-interactions {
+  width: 42rem;
+  max-width: 42rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
 
+.bottom-interactions .notifications li {
+  margin-right: 1rem;
+}
+
+/*========
+  footer
+==========*/
 footer {
   height: 5.2rem;
   background: black;
