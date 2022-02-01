@@ -342,6 +342,17 @@ article p {
   color: black;
 }
 
+.inline {
+  display: inline;
+  text-decoration: none;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+.align-middle {
+  text-align: center;
+  font-weight: 600;
+}
+
 /*=============================
   article bottom interactions
 ===============================*/
