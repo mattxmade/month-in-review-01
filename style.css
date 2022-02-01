@@ -22,7 +22,6 @@ body {
   article title
 */
 h1 {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
 }
@@ -31,13 +30,12 @@ h1 {
   author name
 */
 h2 {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 1.8rem;
+  cursor: pointer;
 }
 
 h3 {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -58,7 +56,7 @@ nav {
   
   font-size: 1rem;
   padding: 2.5rem 4rem;
-  border: 0.1rem solid #d1d7da;
+  border-bottom: 0.1rem solid #d1d7da;
 }
 
 nav ul {
@@ -120,7 +118,7 @@ nav .right-items {
   width: 5.6rem;
 
   color: #137ec0;
-  background: white;
+  background: transparent;
 
   border-style: solid;
   border-color: #137ec0;
@@ -145,6 +143,39 @@ nav .right-items li {
 .fa.fa-rebel {
   font-size: 2.4rem;
   color: #393f41;
+}
+
+/*
+  aside
+*/
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+}
+
+aside p {
+  width: 24ch;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+.aside-buttons {
+  display: flex;
+}
+
+.aside-buttons .follow,
+.notifications li:not(:last-child) {            /* last child | https://stackoverflow.com/a/2573566 */
+  margin-right: 0.5rem;
+}
+
+.aside-info {
+  border-bottom: 0.1rem solid #d1d7da;
+}
+
+.notifications {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*
@@ -197,7 +228,7 @@ article .article-nav-right {
 
 .article-nav-right .white-background {
   color: black;
-  background: white;
+  background: transparent;
 }
 
 .article-image {
@@ -205,7 +236,6 @@ article .article-nav-right {
   width: 42rem;
   display: flex;
   overflow: hidden;
-  border: 1px dashed black;
 }
 
 .article-image img {
