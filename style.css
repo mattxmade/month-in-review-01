@@ -42,7 +42,8 @@ h3 {
 p {
   font-size: 1.2rem;
   font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
-  line-height: 2rem;;
+  line-height: 2rem;
+  color: #5e5e5e;
 }
 
 ul {
@@ -140,7 +141,7 @@ nav .right-items li {
 /*
   site logo
 */
-.fa.fa-rebel {
+.fa.fa-github {
   font-size: 2.4rem;
   color: #393f41;
 }
@@ -152,6 +153,20 @@ aside {
   display: flex;
   flex-direction: column;
   width: 12rem;
+  margin: 4rem 1rem 0 4rem;
+  position: fixed;
+  inset: 5.5rem 0 auto 0;
+  z-index: -1;
+}
+
+aside h4,
+aside p,
+aside ul {
+  margin-bottom: 1rem;
+}
+
+.aside-info {
+  margin-bottom: 2rem;
 }
 
 aside p {
@@ -178,10 +193,20 @@ aside p {
   justify-content: space-between;
 }
 
+.notifications i {
+  margin-right: 0.3rem;
+}
+
+.notifications span {
+  color: #5e5e5e;
+}
+
 /*
   main | article
 */
 main {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   margin: 4rem 2rem 2rem;
@@ -212,6 +237,10 @@ article .article-nav-right {
   width: 2rem;
   border: 1px solid black;
   border-radius: 50%;
+}
+
+.article-nav-left {
+  color: #5e5e5e;
 }
 
 .article-nav-right li {
@@ -247,8 +276,40 @@ article .article-nav-right {
   font-size: 0.9rem;
   align-self: center;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  color: #5e5e5e;
 }
 
 article p {
   margin: 1rem 0;
+  color: black;
+}
+
+/*
+  footer
+*/
+
+footer {
+  height: 5.2rem;
+  background: black;
+  display: flex;
+  align-items: center;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .fa.fa-github,
+footer ul {
+  margin: 1rem 4rem;
+  color: white;
+  font-weight: 600;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer li {
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
