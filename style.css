@@ -32,9 +32,12 @@
 html {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
+  flex: auto;
   min-height: 100vh;
   max-width: 1200px;
   background-color: var(--background);
@@ -93,11 +96,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 1rem;
   
   font-size: 1rem;
   padding: 2.5rem 4rem;
   border-bottom: 0.1rem solid var(--border-grey);
+
+  position: relative;
+  z-index: 2;
 }
 
 nav ul {
@@ -112,25 +119,21 @@ nav .right-items {
 }
 
 nav .left-items {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
-.left-items h2,
+nav .left-items,
+nav .author-info {
+  gap: 1.5rem;
+}
+
 .left-items ul {
-  margin-right: 1.5rem;
-}
-
-.left-items ul button {
-  margin-right: 0.5rem;
+  gap: 0.5rem;
 }
 
 .author-info {
   color: var(--grey-dark);
   cursor: pointer;
-}
-
-.author-followers {
-  margin-right: 1.5rem;
 }
 
 .author-buttons {
@@ -210,6 +213,20 @@ nav .right-items li {
   
 }
 
+@media (max-width: 861px) {
+  nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  nav .left-items {
+    flex-wrap: wrap;
+  }
+
+  nav .right-items {
+    align-self: flex-start;
+  }
+}
+
 /*=======
   aside
 =========*/
@@ -217,7 +234,7 @@ aside, .box {
   display: flex;
   flex-direction: column;
   width: 12rem;
-  margin: 4rem 1rem 0 4rem;
+  margin-left: 3rem;
   inset: 5.5rem 0 auto 0;
 }
 
@@ -276,12 +293,15 @@ aside p {
   main | article
 ==================*/
 main {
-  position: relative;
-  z-index: 1;
+  flex: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   margin: 4rem 2rem 2rem;
+
+  position: relative;
+  z-index: 1;
 }
 
 article {
@@ -335,21 +355,21 @@ article .article-nav-right,
   background: transparent;
 }
 
-.article-image {
-  align-self: center;
-  width: 42rem;
+.article-image-card {
   display: flex;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
 }
 
-.article-image img {
-  width: 1920px;
+.article-image-card img {
   height: auto;
+  width: calc(100vw - 10vw);
+  max-width: 42rem;
+  align-self: center;
 }
 
-.article-image-credit {
+.article-image-card p {
   font-size: 0.9rem;
-  align-self: center;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   color: var(--grey-dark);
 }
@@ -374,7 +394,7 @@ article p {
   article bottom interactions
 ===============================*/
 .bottom-interactions {
-  width: 42rem;
+  width: calc(100vw - 10vw);
   max-width: 42rem;
   display: flex;
   flex-direction: row;
