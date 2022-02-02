@@ -36,7 +36,11 @@ html {
 
 body {
   min-height: 100vh;
+  max-width: 1200px;
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*===============
@@ -89,6 +93,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   
   font-size: 1rem;
   padding: 2.5rem 4rem;
@@ -128,6 +133,7 @@ nav .right-items {
   align-self: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /*=============
@@ -191,6 +197,13 @@ nav .right-items li {
   position: absolute;
   background: var(--background);
   height: 13rem;
+}
+
+@media (max-width: 1240px) {
+  aside, .box {
+    visibility: hidden;
+  }
+  
 }
 
 /*=======
