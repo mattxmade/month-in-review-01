@@ -111,6 +111,10 @@ nav .right-items {
   display: flex;
 }
 
+nav .left-items {
+  flex-wrap: wrap;
+}
+
 .left-items h2,
 .left-items ul {
   margin-right: 1.5rem;
