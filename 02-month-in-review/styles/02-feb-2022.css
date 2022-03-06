@@ -472,6 +472,9 @@ main .thread-info-bar {
   margin-right: 0.5rem;
 }
 
+.underline {
+  text-decoration: underline;
+}
 /*=========
   sidebar
 ===========*/
